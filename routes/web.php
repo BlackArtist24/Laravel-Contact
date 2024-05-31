@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test','UserController@check');
 
 Route::controller(UserController::class)->group(function () {
     Route::post('/getUser', 'getUser');
@@ -30,4 +31,5 @@ Route::controller(UserController::class)->group(function () {
     Route::post('/login', 'login');
     Route::post('/queryCheck', 'queryCheck');  //// {modifier}
     // Route::get('/queryCheck/{modifier?}', 'queryCheck');  //// {modifier}
+    Route::get('/test','check');
 });

@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    protected $user;
-    public function __construct()
-    {
-        $this->user = new User();
-    }
+    // protected $user;
+    // public function __construct()
+    // {
+    //     $this->user = new User();
+    // }
 
     public function getUser(Request $request)
     {
@@ -212,5 +212,9 @@ class UserController extends Controller
 
     public function chunkResult(){
         // $query = DB::table('user')->where('status','>',0)->orderBy('id','desc')->chunkById(100,function);
+    }
+
+    public function check(){
+        return "Hi";
     }
 }
